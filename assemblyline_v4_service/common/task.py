@@ -111,7 +111,7 @@ class Task:
         self.supplementary.clear()
 
     def download_file(self) -> str:
-        file_path = os.path.join(tempfile.gettempdir(), self.sha256)
+        file_path = os.path.join(tempfile.gettempdir(), self.file_name)
         if not os.path.exists(file_path):
             raise Exception("File download failed. File not found on local filesystem.")
 
